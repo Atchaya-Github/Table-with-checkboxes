@@ -1,0 +1,27 @@
+<div class="container">
+    <div class="row">
+      <div class="col-12">
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th scope="col">ID</th>
+              <th scope="col">Employee Name</th>
+              <th scope="col">Role</th>
+              <th scope="col">Years of Experience</th>
+              <th scope="col">Band</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let a of array">
+              <td>{{a.id}}</td>
+              <td>{{a.employee_name}}</td>
+              <td>{{a.role}}</td>
+              <td>{{a.years_of_experience}}</td>
+              <td>{{a.band}}</td>
+            </tr>
+          </tbody>
+        </table>      
+      </div>
+    </div>
+  </div>
+  

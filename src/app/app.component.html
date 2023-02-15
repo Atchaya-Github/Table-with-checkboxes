@@ -1,0 +1,38 @@
+
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Employee Name</th>
+            <th scope="col">Role</th>
+            <th scope="col">Years of Experience</th>
+            <th scope="col">Band</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let d of data;let i=index">
+            <td>
+              <div class="custom-control custom-checkbox">
+                  <input #checkbox type="checkbox" class="custom-control-input" id="customCheck1" (change)="check($event)"
+                 value="{{d | json}}" >
+                  <label class="custom-control-label ps-2" for="customCheck1">{{d.id}}</label>
+              </div>
+            </td>
+            <td>{{d.employee_name}}</td>
+            <td>{{d.role}}</td>
+            <td>{{d.years_of_experience}}</td>
+            <td>{{d.band}}</td>
+          </tr>
+         <button class="btn btn-primary" (click)="submit()">Submit</button>
+       
+        </tbody>
+      </table>      
+    </div>
+  </div>
+</div>
+
+
+<app-table [array]="total_array"></app-table>
